@@ -1,0 +1,17 @@
+mixin order(data)
+	+b('section').order
+		+e('h2').title <span>расскажите</span> нам о своем проекте
+		+e('p').text Расскажите о проекте, задайте вопросы. Мы скоро ответим.
+
+
+		+e.in
+			+b.form
+				+e('form')(method='post' action='/')
+					+e.input._full
+						+e('input')(type='text' value='' placeholder='Ваше имя')
+					+e.input._half
+						+e('input')(type='text' value='' placeholder='Телефон')
+					+e.input._half
+						+e('input')(type='text' value='' placeholder='Эл. почта')
+
+

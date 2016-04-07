@@ -1,0 +1,31 @@
+doctype html
+html(class="no-js", lang="ru")
+	include ../modules/bemto/bemto
+
+	include ../modules/head/head
+	include ../modules/header/header
+	include ../modules/hero/hero
+	include ../modules/services/services
+	include ../modules/portfolio/portfolio
+	include ../modules/order/order
+	include ../modules/footer/footer
+
+	head
+		+head(head.defaults)
+	body.page
+		|%=symbols=%
+
+		.page__wrapper
+			+header()
+			+hero()
+			+services()
+			+portfolio()
+			+order()
+
+			+footer()
+
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')

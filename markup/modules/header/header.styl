@@ -1,0 +1,89 @@
+.header
+	position absolute
+	top 0
+	left 0
+	right 0
+	z-index 3
+	&__in
+		position relative
+		@extend .in
+		padding-top 42px
+		width 1070px
+		clearfix()
+
+.logo
+	float left
+	bg($logo)
+	hide-text()
+.main-nav
+	margin-left 270px
+	float left
+	font-size 0
+	&__list
+		clearfix()
+	&__item
+		margin-left 30px
+		display inline-block
+		vertical-align top
+		&:first-child
+			margin-left 0
+	&__link
+		border-bottom 4px solid transparent
+		display block
+		font-family $myriad-pro
+		font-size 17px
+		font-weight normal
+		line-height 23px
+		color $color2
+		text-transform uppercase
+		text-decoration none
+		&:hover
+			border-bottom 4px solid $color1
+			color $color1
+
+	&__item_active
+		.main-nav__link
+			border-bottom 4px solid $color1
+			color $color1
+
+
+.header
+	&__contacts
+		position absolute
+		top 42px
+		right 0
+	&__phone
+		margin-bottom 23px
+		font-family $myriad-pro
+		font-size 17px
+		font-weight normal
+		line-height 37px
+		color $color2
+		text-transform uppercase
+	&__social
+		font-size 0
+		clearfix()
+	&__social-link
+		margin-left 39px
+		display inline-block
+		vertical-align top
+		hide-text()
+		&:first-child
+			margin-left 0
+		&_email
+			bg($mail)
+		&_vk
+			bg($vk)
+		&_instagram
+			bg($instagram)
+
+
+
+
+
+
+
+
+
+
+

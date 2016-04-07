@@ -1,0 +1,14 @@
+mixin hero(data)
+	+b('section').hero
+		+e.video
+		+e.fade
+		+e.in
+			+e('h1').title Проектирование и дизайн
+			+e('p').text Мы любим делать сайты, приложения, фирменные стили и иллюстрации
+
+		+b.bubbles
+			+e('a').item._1(href='#') Doozy
+			+e('a').item._2(href='#') Позвонить
+			+e('a').item._3(href='#')
+				+e.w
+					+e('span').cell Свяжитесь <br/>с нами

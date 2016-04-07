@@ -1,0 +1,75 @@
+.hero
+	position relative
+	height 768px
+	&__video
+		position relative
+		// padding-top 60.952380950%
+		width 100%
+	&__fade
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		z-index 1
+		background-color $color3
+	&__in
+		position absolute
+		top 0
+		left 50%
+		@extend .in
+		margin-left -470px
+		color $color2
+		z-index 2
+	&__title
+		margin-top 276px
+		margin-bottom 21px
+		font-family $clean-black
+		font-size 48px
+		font-weight normal
+		line-height 36px
+		text-transform uppercase
+		text-align center
+	&__text
+		font-family $clean-light
+		font-size 23px
+		font-weight normal
+		line-height 26px
+		text-align center
+		letter-spacing tracking(-5)
+
+.bubbles
+	position absolute
+	right 0
+	bottom 0
+	width 400px
+	font-size 0
+	z-index 2
+	&__item
+		margin-left 30px
+		display inline-block
+		vertical-align top
+		bg($bubble)
+		text-decoration none
+		&:first-child
+			margin-left 0
+	&__item_1
+		bg($bubble-logo)
+	&__item_2
+		bg($bubble-phone)
+	&__w
+		display table
+		width 100%
+		height 100%
+	&__cell
+		display table-cell
+		vertical-align middle
+		font-family $exo2-bold
+		font-size 16px
+		font-weight normal
+		line-height 17px
+		color #FFF
+		text-align center
+
+
+

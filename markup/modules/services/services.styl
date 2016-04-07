@@ -1,0 +1,55 @@
+.services
+	background url('../images/general/service-pattern.png') no-repeat
+	&__in
+		padding-top 98px
+		padding-bottom 87px
+		@extend .in
+		min-height 420px
+	&__list
+		clearfix()
+	&__link
+		display block
+		font-size 0
+		text-decoration none
+	&__item
+		display inline-block
+		vertical-align top
+		text-align center
+	&__item-w
+		display block
+		min-height 183px
+	&__item_1
+		width 275px
+		.services__item-icon
+			bg($service-1)
+	&__item_2
+		width 195px
+		.services__item-icon
+			bg($service-2)
+	&__item_3
+		width 275px
+		.services__item-icon
+			bg($service-3)
+	&__item_4
+		width 195px
+		.services__item-icon
+			bg($service-4)
+	&__item-icon
+		display block
+	&__item-title
+		position relative
+		padding-top 18px
+		display block
+		font-family $clean-black
+		font-size 20px
+		font-weight normal
+		line-height 1
+		color $color4
+		&:before
+			position absolute
+			top 0
+			left 50%
+			margin-left -28px
+			width 100px
+			height 1px
+			background-color #adadad
