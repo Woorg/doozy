@@ -1,2 +1,300 @@
 .order
-	display block
+	position relative
+	z-index 1
+	&_second
+		padding-top 63px
+		padding-bottom 9px
+	&__w-w
+		padding-top 63px
+		padding-bottom 97px
+		background url('../images/general/pattern-2.png') repeat-y
+		background-size cover
+	&__title
+		position relative
+		margin-bottom 10px
+		padding-bottom 5px
+		font-family $myriad-pro
+		font-size 28px
+		font-weight normal
+		line-height 1
+		text-align center
+		text-transform uppercase
+		span
+			color $color1
+		&:after
+			position absolute
+			content ""
+			left 50%
+			bottom 0
+			margin-left -95px
+			width 183px
+			height 1px
+			background-color #adadad
+		&_style-1
+			font-family $clean-black
+			font-weight normal
+			font-size 28px
+		&_style-2
+			margin-bottom 31px
+			font-family $clean-black
+			font-weight normal
+			font-size 28px
+			&:after
+				display none
+	&__text
+		margin-bottom 41px
+		text-align center
+	&__in
+		@extend .in
+.form
+	padding-top 23px
+	padding-left ratio-percentage(20,900)
+	padding-right ratio-percentage(20,900)
+	padding-bottom 28px
+	height 143px
+	background-color #5bbbe1
+	box-shadow 0.7px 0.7px 1px rgba(0, 0, 0, 0.18), inset 0.7px 0.7px 1px rgba(255, 255, 255, 0.75)
+	&__in
+		margin auto
+		width 395px
+		+below(420px)
+			width 100%
+	&__input
+		margin-bottom 12px
+		border-radius 4px
+		input
+			border none
+			padding-top 8px
+			padding-left 14px
+			padding-right 12px
+			padding-bottom 4px
+			width 100%
+			height 100%
+			background-color white
+			font-size 17px
+			line-height 1
+			color #868686
+			border-radius 4px
+	&__input-w
+		clearfix()
+	&__input_full
+		width 395px
+		height 40px
+		background-color white
+		+below(420px)
+			width 100%
+	&__input_half
+		margin-left 13px
+		float left
+		width 191px
+		height 40px
+		background-color white
+		border-radius 4px
+		+below(420px)
+			width 47.6%
+		&:first-child
+			margin-left 0
+
+.order
+	&_second
+		padding-top 0
+		background url('../images/general/pattern-2.png') repeat-y
+		background-size cover
+	&__list
+		text-align center
+		clearfix()
+	&__link
+		display block
+		font-size 0
+		text-decoration none
+		&:hover
+			text-decoration none
+	&__item
+		margin-left 30px
+		margin-bottom 20px
+		display inline-block
+		vertical-align top
+		text-align left
+		&:first-child
+			margin-left 0
+		+below(768px)
+			margin-left 0
+	&__item_1
+		width 300px
+		+below(450px)
+			width 100%
+		.order__item-icon
+			margin-left 46px
+			bg($service-1)
+			+below(940px)
+				position relative
+				right -30px
+				margin auto
+		.order__item-title
+			margin-left 86px
+			padding-top 30px
+			+below(940px)
+				margin-left 0
+				text-align center
+			+below(450px)
+				margin-left 0
+				text-align center
+	&__item_2
+		width 300px
+		+below(940px)
+			width 300px
+		+below(450px)
+			width 100%
+		.order__item-icon
+			margin-left 4px
+			margin auto
+			bg($service-2)
+			+below(940px)
+				margin auto
+		.order__item-title
+			margin-left -6px
+			padding-top 32px
+			text-align center
+	&__item_3
+		width 300px
+		+below(940px)
+			width 49.5%
+		+below(450px)
+			width 100%
+		.order__item-icon
+			margin-left 60px
+			bg($service-3)
+			+below(940px)
+				margin auto
+		.order__item-title
+			margin-left 30px
+			padding-top 18px
+			text-align center
+			+below(940px)
+				margin-left 0
+				text-align center
+	&__item-icon
+		display block
+	&__item-title
+		position relative
+		padding-top 18px
+		min-height 58px
+		display block
+		font-family $clean-black
+		font-size 20px
+		font-weight normal
+		line-height 1
+		color $color4
+
+
+.comment
+	min-height 86px
+	background-color #e3e3e3
+	box-shadow 0.7px 0.7px 1px rgba(0, 0, 0, 0.39), inset 0.7px 0.7px 1px rgba(255, 255, 255, 0.55)
+	&__in
+		padding-top 23px
+		padding-bottom 23px
+		@extend .in
+		+below(940px)
+			padding-left ratio-percentage(20,900)
+			padding-right ratio-percentage(20,900)
+	&__input
+		height 40px
+		input
+			border none
+			padding 14px ratio-percentage(16,920) 10px ratio-percentage(16,920)
+			width 100%
+			height 100%
+			background-color white
+
+
+.when
+	padding-top 50px
+	padding-bottom 70px
+	background url('../images/general/pattern-2.png') repeat-y
+	background-size cover
+	text-align center
+	&__in
+		@extend .in
+	&__title
+		position relative
+		margin-bottom 40px
+		padding-bottom 5px
+		font-family $clean-black
+		font-weight normal
+		font-size 28px
+		line-height 1
+		text-align center
+		text-transform uppercase
+		span
+			color $color1
+
+	&__list
+		display inline-block
+		clearfix()
+	&__item
+		margin-left 15px
+		margin-bottom 65px
+		width 300px
+		display inline-block
+		vertical-align top
+		&:first-child
+			margin-left 0
+		+below(940px)
+			margin-left 0
+			width 49.5%
+		+below(450px)
+			width 100%
+		&_1
+			.when__item-icon
+				bg($when-1)
+		&_2
+			.when__item-icon
+				margin-bottom 21px
+				bg($when-2)
+		&_3
+			.when__item-icon
+				bg($when-3)
+	&__item-icon
+		margin 0 auto 21px
+		display block
+	&__link
+		display block
+		text-decoration none
+	&__item-title
+		position relative
+		display block
+		font-family $clean-black
+		font-size 20px
+		font-weight normal
+		line-height 1
+		color $color4
+		text-align center
+	&__button-w
+		text-align center
+	&__button
+		border none
+		padding 22px 45px 19px 45px
+		display inline-block
+		background-color #5bbbe1
+		font-family $clean-light
+		font-size 30px
+		font-weight normal
+		line-height 1
+		color white
+		border-radius 10px
+		box-shadow 0.7px 0.7px 1px rgba(0, 0, 0, 0.39), inset 0.7px 0.7px 1px rgba(255, 255, 255, 0.55)
+
+
+
+
+.order-w
+	display none
+	min-height 0
+	transition height .3s ease
+	&_active
+		display block
+		min-height 912px
+
+
+

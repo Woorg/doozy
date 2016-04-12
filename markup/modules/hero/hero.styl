@@ -1,10 +1,22 @@
 .hero
 	position relative
-	height 768px
+	// padding-top 60.95238095%
+	padding-top ratio-percentage(656,1260)
+	overflow hidden
+	+below(940px)
+		height auto
+	+below(470px)
+			height 280px
 	&__video
-		position relative
-		// padding-top 60.952380950%
+		position absolute
+		top 0
 		width 100%
+		// padding-top 60.95238095%
+		padding-top ratio-percentage(656,1260)
+		+below(940px)
+			height auto
+		+below(470px)
+			height 280px
 	&__fade
 		position absolute
 		top 0
@@ -16,20 +28,52 @@
 	&__in
 		position absolute
 		top 0
-		left 50%
+		left 0
+		right 0
 		@extend .in
-		margin-left -470px
+		// margin-left -470px
+		width 100%
+		height 100%
 		color $color2
+		text-align center
 		z-index 2
+		+below(940px)
+			left 0
+			margin-left 0
+	&__w
+		position relative
+		margin-top 285px
+		display inline-block
+		&:after,
+		&:before
+			position absolute
+			content ""
+			top 50%
+			width 90px
+			height 2px
+			background-color $color1
+		&:after
+			left -124px
+		&:before
+			right -124px
+		+below(940px)
+			margin-top ratio-percentage(250,768)
+		+below(470px)
+			margin-top 140px
+			font-size 25px
 	&__title
-		margin-top 276px
-		margin-bottom 21px
+		margin-top 0
+		margin-bottom 24px
 		font-family $clean-black
 		font-size 48px
 		font-weight normal
 		line-height 36px
 		text-transform uppercase
 		text-align center
+		+below(940px)
+			margin-bottom 15px
+			font-size 30px
+
 	&__text
 		font-family $clean-light
 		font-size 23px
@@ -37,16 +81,26 @@
 		line-height 26px
 		text-align center
 		letter-spacing tracking(-5)
+		+below(940px)
+			font-size 14px
 
 .bubbles
 	position absolute
-	right 0
-	bottom 0
+	right 16px
+	bottom 63px
 	width 400px
 	font-size 0
 	z-index 2
+	+below(1024px)
+		bottom 10px
+		display none
+	+below(940px)
+		right 0
+		bottom 20px
+	+below(790px)
+		display none
 	&__item
-		margin-left 30px
+		margin-left 33px
 		display inline-block
 		vertical-align top
 		bg($bubble)

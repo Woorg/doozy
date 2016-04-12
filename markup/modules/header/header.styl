@@ -8,27 +8,59 @@
 		position relative
 		@extend .in
 		padding-top 42px
+		padding-left 20px
+		padding-right 20px
 		width 1070px
 		clearfix()
-
+		+below(1070px)
+			width 100%
 .logo
 	float left
 	bg($logo)
 	hide-text()
+	+below(850px)
+		margin-left 44px
 .main-nav
-	margin-left 270px
+	margin-top 6px
+	margin-left ratio-percentage(262,1260)
 	float left
 	font-size 0
+	+below(1024px)
+		margin-left ratio-percentage(200,1260)
+	+below(940px)
+		margin-left ratio-percentage(70,1260)
+	+below(850px)
+		margin-top -65px
+		margin-left 0
+		clear left
 	&__list
 		clearfix()
+		+below(850px)
+			display none
+	&__list_active
+		position relative
+		top 10px
+		left -5px
+		padding-top 10px
+		padding-left 10px
+		padding-right 10px
+		display block
+		width 200px
+		background rgba(11,19,28,.7)
 	&__item
-		margin-left 30px
+		margin-left 21px
 		display inline-block
 		vertical-align top
 		&:first-child
 			margin-left 0
+		+below(850px)
+			margin-left 0
+			margin-bottom 10px
+			width 100%
 	&__link
 		border-bottom 4px solid transparent
+		padding-left 5px
+		padding-right 8px
 		display block
 		font-family $myriad-pro
 		font-size 17px
@@ -37,34 +69,66 @@
 		color $color2
 		text-transform uppercase
 		text-decoration none
+		letter-spacing tracking(40)
 		&:hover
 			border-bottom 4px solid $color1
 			color $color1
+			text-decoration none
 
 	&__item_active
 		.main-nav__link
 			border-bottom 4px solid $color1
 			color $color1
 
+	&__button
+		display none
+		font-family $myriad-pro
+		font-size 17px
+		font-weight normal
+		line-height 23px
+		color $color2
+		text-transform uppercase
+		text-decoration none
+		+below(850px)
+			display block
+	&__button-plast
+		margin-top 3px
+		background $color2
+		display block
+		width 33px
+		height 4px
+		transform rotate(-180deg)
+		&_1
+			margin-top 5px
+		&_2
+			margin-top 5px
+		&_3
+			margin-top 5px
+			transform rotate(180deg)
+
 
 .header
 	&__contacts
 		position absolute
-		top 42px
-		right 0
+		top 50px
+		right 18px
 	&__phone
-		margin-bottom 23px
+		margin-bottom 21px
 		font-family $myriad-pro
 		font-size 17px
 		font-weight normal
-		line-height 37px
+		line-height 1
 		color $color2
 		text-transform uppercase
+		letter-spacing tracking(40)
+		+below(375px)
+			font-size 12px
 	&__social
 		font-size 0
 		clearfix()
 	&__social-link
-		margin-left 39px
+		margin-left 38px
+		margin-right 3px
 		display inline-block
 		vertical-align top
 		hide-text()
@@ -76,6 +140,9 @@
 			bg($vk)
 		&_instagram
 			bg($instagram)
+		+below(375px)
+			margin-left 10px
+			text-align right
 
 
 

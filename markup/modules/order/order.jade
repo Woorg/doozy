@@ -1,17 +1,63 @@
 mixin order(data)
-	+b('section').order
-		+e('h2').title <span>расскажите</span> нам о своем проекте
-		+e('p').text Расскажите о проекте, задайте вопросы. Мы скоро ответим.
+	+b('section').order._first
+		+e.w-w
+			+e('h2').title._style-1 <span>расскажите</span> нам о своем проекте
+			+e('p').text Расскажите о проекте, задайте вопросы. Мы скоро ответим.
+
+			+e('form')(method='post' action='/')
+				+b.form
+					+e.in
+						+e.input._full
+							+e('input')(type='text' value='' placeholder='Ваше имя')
+						+e.input-w
+							+e.input._half
+								+e('input')(type='text' value='' placeholder='Телефон')
+							+e.input._half
+								+e('input')(type='text' value='' placeholder='Эл. почта')
+		+b.order-w
+			+b.order._second
+				+e('h2').title._style-2 <span>что</span> нужно сделать?
+				+e('ul').list
+					+e('li').item._1
+						+e('a').link(href='#link')
+								+e.item-icon
+							+e.item-title Дизайн сайта
+					+e('li').item._2
+						+e('a').link(href='#link')
+								+e.item-icon
+							+e.item-title Дизайн приложений
+					+e('li').item._3
+						+e('a').link(href='#link')
+								+e.item-icon
+							+e.item-title фирменный стиль <br/>или разработать логотип
+			+b.comment
+				+e.in
+					+e.input
+						+e('input')(type='text' value='' placeholder='Комментарий')
+
+			+b.when
+				+e.in
+					+e('h2').title <span>Когда</span> нужно сделать?
+					+e('ul').list
+						+e('li').item._1
+							+e('a').link(href='#link')
+									+e.item-icon
+									+e.item-title Нужно вчера
+						+e('li').item._2
+							+e('a').link(href='#link')
+									+e.item-icon
+									+e.item-title Неделя
+						+e('li').item._3
+							+e('a').link(href='#link')
+									+e.item-icon
+									+e.item-title больше недели
+
+					+e.button-w
+						+e('input').button(type='submit' value='Отправить')
 
 
-		+e.in
-			+b.form
-				+e('form')(method='post' action='/')
-					+e.input._full
-						+e('input')(type='text' value='' placeholder='Ваше имя')
-					+e.input._half
-						+e('input')(type='text' value='' placeholder='Телефон')
-					+e.input._half
-						+e('input')(type='text' value='' placeholder='Эл. почта')
+
+
+
 
 

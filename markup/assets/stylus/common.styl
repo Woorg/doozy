@@ -2,16 +2,26 @@
 
 body
 	font-family $clean-light
+	font-weight normal
 	font-size 20px
 	color $color8
 	line-height 1
 
 
 
-.page__wrapper
-	min-width 940px
-
+// .page__wrapper
 
 .in
 	margin auto
 	width 940px
+	+below(940px)
+		width 100%
+
+&::-webkit-input-placeholder
+	color #868686
+&:-moz-placeholder
+	color #868686
+&::-moz-placeholder
+	color #868686
+&:-ms-input-placeholder
+	color #868686

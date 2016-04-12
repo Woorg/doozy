@@ -7,6 +7,8 @@ $(document).ready(function($) {
 	}, {
 		autoplay: true,
 		loop: true,
-		posterType: 'none'
+		posterType: 'jpg',
+		resizing: true
+
 	});
 });

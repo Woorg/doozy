@@ -4,10 +4,14 @@ mixin header(data)
 			+b('a').logo(href='#link') Doozy
 
 			+b('nav').main-nav
+				+e('a').button(href='#menu')
+					+e.button-plast._1
+					+e.button-plast._2
+					+e.button-plast._3
 				+e('ul').list
-					+e('li').item
-						+e('a').link(href='#link') ГЛАВНАЯ
 					+e('li').item._active
+						+e('a').link(href='#link') ГЛАВНАЯ
+					+e('li').item
 						+e('a').link(href='#link') УСЛУГИ
 					+e('li').item
 						+e('a').link(href='#link') ПОРТФОЛИО

@@ -1,55 +1,151 @@
 .services
 	background url('../images/general/service-pattern.png') no-repeat
+	background-size cover
 	&__in
-		padding-top 98px
-		padding-bottom 87px
+		padding-top 92px
+		padding-bottom 53px
 		@extend .in
 		min-height 420px
 	&__list
+		text-align center
 		clearfix()
 	&__link
 		display block
 		font-size 0
 		text-decoration none
+		&:hover
+			text-decoration none
 	&__item
+		margin-bottom 20px
 		display inline-block
 		vertical-align top
-		text-align center
+		text-align left
 	&__item-w
 		display block
-		min-height 183px
+		min-height 188px
 	&__item_1
 		width 275px
 		.services__item-icon
+			margin-left -3px
 			bg($service-1)
+			+below(940px)
+				margin auto
+			+below(460px)
+				position relative
+				right -14px
+				margin-left auto
+		.services__item-title
+			margin-left 23px
+			padding-top 26px
+			+below(940px)
+				margin-left 0
+				text-align center
+			+below(450px)
+				margin-left 0
+				text-align center
+			&:after
+				margin-left 44px
+				+below(940px)
+					left 50%
+					margin-left -36px
+
+		+below(940px)
+			width 49.5%
+		+below(450px)
+			width 100%
 	&__item_2
 		width 195px
+
 		.services__item-icon
+			margin-left 4px
 			bg($service-2)
+			+below(940px)
+				margin auto
+		.services__item-title
+			margin-left -12px
+			padding-top 16px
+			text-align center
+			+below(940px)
+				text-align center
+			&:after
+				margin-left 74px
+				+below(940px)
+					left 50%
+					margin-left -28px
+		+below(940px)
+			width 49.5%
+		+below(450px)
+			width 100%
 	&__item_3
-		width 275px
+		width 260px
 		.services__item-icon
+			margin-left 50px
 			bg($service-3)
+			+below(940px)
+				margin auto
+		.services__item-title
+			margin-left 30px
+			padding-top 16px
+			text-align center
+			+below(940px)
+				margin-left 0
+				text-align center
+			&:after
+				margin-left 88px
+				+below(940px)
+					left 50%
+					margin-left -34px
+
+		+below(940px)
+			width 49.5%
+		+below(450px)
+			width 100%
 	&__item_4
 		width 195px
 		.services__item-icon
+			margin-left 22px
 			bg($service-4)
+			+below(940px)
+				margin auto
+		.services__item-title
+			margin-right 21px
+			padding-top 26px
+			text-align right
+			+below(940px)
+				margin-right 0
+				text-align center
+			&:after
+				margin-left 80px
+				+below(940px)
+					left 50%
+					margin-left -28px
+		+below(940px)
+			width 49.5%
+		+below(450px)
+			width 100%
 	&__item-icon
 		display block
 	&__item-title
 		position relative
 		padding-top 18px
+		min-height 58px
 		display block
 		font-family $clean-black
 		font-size 20px
 		font-weight normal
 		line-height 1
 		color $color4
-		&:before
+		&:after
 			position absolute
+			content ""
 			top 0
-			left 50%
-			margin-left -28px
-			width 100px
+			left 0
+			margin-left 44px
+			width 57px
 			height 1px
 			background-color #adadad
+
+
+
+
+
